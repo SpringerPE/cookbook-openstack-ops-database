@@ -9,6 +9,8 @@ recipe 'client', 'Installs client packages for the database used by the deployme
 recipe 'server', 'Installs and configures server packages for the database used by the deployment.'
 recipe 'mysql-client', 'Installs MySQL client packages.'
 recipe 'mysql-server', 'Installs and configures MySQL server packages.'
+recipe 'percona-client', 'Installs Percona client packages.'
+recipe 'percona-server', 'Installs and configures Percona server packages.'
 recipe 'postgresql-client', 'Installs PostgreSQL client packages.'
 recipe 'postgresql-server', 'Installs and configures PostgreSQL server packages.'
 recipe 'openstack-db', 'Creates necessary tables, users, and grants for OpenStack.'
@@ -18,6 +20,7 @@ recipe 'openstack-db', 'Creates necessary tables, users, and grants for OpenStac
 end
 
 depends 'mysql', '~> 4.1'
+depends 'percona', '~> 0.15.1'
 depends 'postgresql', '~> 3.3'
 depends 'database', '~> 2.0'
 depends 'openstack-common', '~> 9.0'
